@@ -53,7 +53,7 @@ class MatrixCalculator {
 				row--; 
 			} 
 		} 
-		this.printOnConsole("Matrix rank is: "+rank); 		
+		this.printOnConsole("Peringkat matriks: "+rank); 		
 	}
 	
 	invertMatrix() {		
@@ -61,7 +61,7 @@ class MatrixCalculator {
 		if (this.determinantA==null)
 			return; //Error will already be printed out by calculateDeterminant method.
 		if(this.determinantA==0) {
-			this.printOnConsole("Matrix is non-invertible.");
+			this.printOnConsole("Matriks tidak dapat dibalik.");
 			return;
 		}
 		var adjacent = [];
@@ -133,7 +133,7 @@ class MatrixCalculator {
 	
 	transposeMatrix() {
 		this.rebuildMatrix();
-		var string = "Transposition result:\r";
+		var string = "Hasil transposisi:\r";
 		for (var i =0; i<this.AxDimension; i++) {
 			for (var j=0; j<this.AyDimension; j++) {
 				string=string+"\t"+this.matrixA[j][i];
@@ -146,7 +146,7 @@ class MatrixCalculator {
 	subtractMatrix() {
 		this.rebuildMatrix();
 		if (this.AxDimension!=this.AyDimension) {
-			this.printOnConsole("Matrices have different dimmensions.");
+			this.printOnConsole("Matriks mempunyai dimensi yang berbeda.");
 			return;
 		}
 		var result = [];
@@ -157,7 +157,7 @@ class MatrixCalculator {
 				result[i][j]=Math.round((parseFloat(this.matrixA[i][j])-parseFloat(this.matrixB[i][j]))*100)/100;
 			}
 		}
-		var string = "Subtraction result:\r";
+		var string = "Hasil pengurangan	:\r";
 		for (i =0; i<this.AyDimension; i++) {
 			for (var j=0; j<this.AxDimension; j++) {
 				string=string+"\t"+result[i][j];
@@ -170,7 +170,7 @@ class MatrixCalculator {
 	addMatrix() {
 		this.rebuildMatrix();
 		if (this.AxDimension!=this.AyDimension) {
-			this.printOnConsole("Matrices have different dimmensions.");
+			this.printOnConsole("Matriks mempunyai dimensi yang berbeda.");
 			return;
 		}
 		var result = [];
@@ -182,7 +182,7 @@ class MatrixCalculator {
 				result[i][j]=Math.round((parseFloat(this.matrixA[i][j])+parseFloat(this.matrixB[i][j]))*100)/100;
 			}
 		}
-		var string = "Addition result:\r";
+		var string = "Hasil tambahan:\r";
 		for (i =0; i<this.AyDimension; i++) {
 			for (var j=0; j<this.AxDimension; j++) {
 				string=string+"\t"+result[i][j];
@@ -195,7 +195,7 @@ class MatrixCalculator {
 	multiplyMatrix() {
 		this.rebuildMatrix();
 		if (this.AxDimension!=this.ByDimension) {
-			this.printOnConsole("Number of columns on A is different from number of rows on B.");
+			this.printOnConsole("Jumlah kolom pada A berbeda dengan jumlah baris pada B.");
 			return;
 		}
 		var result = [];
@@ -213,7 +213,7 @@ class MatrixCalculator {
 				result[i][j] = Math.round(result[i][j]*100)/100;
 			}
 		}
-		var string = "Multiplication result:\r";
+		var string = "Hasil perkalian:\r";
 		for (i=0; i<rowsRes; i++) {
 			for (j=0; j<columnsRes; j++) {
 				string=string+"\t"+result[i][j];
@@ -227,7 +227,7 @@ class MatrixCalculator {
 		this.rebuildMatrix();
 		if (this.AxDimension!=this.AyDimension) {
 			this.determinantA=null;
-			this.printOnConsole("Non-square matrix, determinant cannot be calculated.");
+			this.printOnConsole("determinannya tidak dapat dihitung.");
 			return;
 		}
 		var determinant;
