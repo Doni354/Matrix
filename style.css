@@ -1,0 +1,64 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.matrix-container {
+    margin-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.matrix-input {
+    margin-top: 10px;
+}
+
+.matrix-input .row {
+    margin-bottom: 10px;
+}
+
+#console {
+    width: 100%;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    border: none;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #2980b9;
+}
+
+.btn-primary:focus, .btn-secondary:focus {
+    background-color: #2980b9;
+    box-shadow: none;
+}
+
+.btn-primary:active, .btn-secondary:active {
+    background-color: #1abc9c;
+}
+
+.btn-primary:disabled, .btn-secondary:disabled {
+    background-c
