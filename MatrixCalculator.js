@@ -220,6 +220,9 @@ class MatrixCalculator {
 			}
 			string=string+"\r";
 		}
+		if (isNaN(i) || isNaN(j)) {
+      console.error("Error: Elemen matriks bukan angka.");
+		}
 		this.printOnConsole(string);
 	}
 	
